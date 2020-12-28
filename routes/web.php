@@ -32,3 +32,4 @@ Route::post('/edit/save/{id}', 'UserController@saveUser')->name('user.save');
 /* Eliminar */
 Route::delete('/delete/{id}', 'UserController@deleteUser')->name('user.delete');
 /* Mostrar */
+Route::get('/show/{id}', 'UserController@showUser')->name('user.show');

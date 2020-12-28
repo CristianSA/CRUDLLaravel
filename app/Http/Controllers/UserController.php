@@ -49,4 +49,11 @@ class UserController extends Controller
         $usuario->delete();
         return redirect()->route('home');
     }
+    /* Función que mostrará la información del usuario */
+    public function showUser($id){
+        $usuario = User::findOrFail($id);
+        return view('user.show', compact(
+            'usuario'
+        ));
+    }
 }

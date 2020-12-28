@@ -67,7 +67,7 @@
                                                         Eliminar
                                                     </button>
                                                 </form>
-                                                <a href="#" class="btn btn-warning btn-sm">
+                                                <a href="{{ route('user.show', $usuario->id) }}" class="btn btn-warning btn-sm">
                                                     Mostrar
                                                 </a>
                                             </th>
