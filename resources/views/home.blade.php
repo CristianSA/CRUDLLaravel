@@ -60,9 +60,13 @@
                                                 <a href="{{ route('user.edit', $usuario->id) }}" class="btn btn-primary btn-sm">
                                                     Editar
                                                 </a>
-                                                <a href="#" class="btn btn-danger btn-sm">
-                                                    Eliminar
-                                                </a>
+                                                <form action="{{ route('user.delete', $usuario->id) }}" method="post">
+                                                    @csrf
+                                                    @method('delete')
+                                                    <button type="submit" class="btn btn-danger btn-sm">
+                                                        Eliminar
+                                                    </button>
+                                                </form>
                                                 <a href="#" class="btn btn-warning btn-sm">
                                                     Mostrar
                                                 </a>

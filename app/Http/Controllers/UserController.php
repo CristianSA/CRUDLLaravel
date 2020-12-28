@@ -43,4 +43,10 @@ class UserController extends Controller
         ]);
         return redirect()->route('user.edit', ['id' => $id]);
     }
+    /* Función para eleminar un usuario dado su id */
+    public function deleteUser($id){
+        $usuario = User::find($id);
+        $usuario->delete();
+        return redirect()->route('home');
+    }
 }

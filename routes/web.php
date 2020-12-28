@@ -30,4 +30,5 @@ Route::get('/edit/{id}', 'UserController@editUser')->name('user.edit');
 /* Guardar editado */
 Route::post('/edit/save/{id}', 'UserController@saveUser')->name('user.save');
 /* Eliminar */
+Route::delete('/delete/{id}', 'UserController@deleteUser')->name('user.delete');
 /* Mostrar */
