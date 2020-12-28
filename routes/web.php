@@ -20,3 +20,10 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+/* Crearemos las rutas para las distintas acciones */
+/* Editar */
+Route::get('/edit/{id}', 'UserController@editUser')->name('user.edit');
+/* Guardar editado */
+Route::post('/edit/save/{id}', 'UserController@saveUser')->name('user.save');
+/* Eliminar */
+/* Mostrar */
