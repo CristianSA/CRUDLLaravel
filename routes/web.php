@@ -21,6 +21,10 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 /* Crearemos las rutas para las distintas acciones */
+/* Crear */
+Route::get('/create', 'UserController@createUser')->name('user.create');
+/* Guardar usuario */
+Route::post('/create/save', 'UserController@addUser')->name('user.add');
 /* Editar */
 Route::get('/edit/{id}', 'UserController@editUser')->name('user.edit');
 /* Guardar editado */

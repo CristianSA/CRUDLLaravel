@@ -18,6 +18,13 @@
                         CRUDLLaravel App
                     </h4>
                     <div class="row">
+                        <div class="col-12 col-md-12">
+                            <a href="{{ route('user.create') }}" class="btn btn-success btn-sm">
+                                Crear
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row">
                         <div class="col-12 col-md-12 text-center mt-2">
                             <table class="table table-responsive">
                                 <thead>

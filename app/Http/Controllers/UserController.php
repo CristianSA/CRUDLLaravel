@@ -4,9 +4,23 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
+use Hash;
 
 class UserController extends Controller
 {
+    /* Función que creará un usuario nuevo */
+    public function createUser(){
+        return view('user.new');
+    }
+    /* Función que guardará el usuario en nuestra base de datos */
+    public function addUser(Request $request){
+        User::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => $request->password
+        ]);
+        return redirect()->route('home');
+    }
     /* Función que mostrará la vista del perfil de usuario con sus datos correspondientes
         dado un id
     */
